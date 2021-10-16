@@ -1,0 +1,116 @@
+Ex1.a- Fatorial
+
+<?php
+  $n=4;
+  $fatorial=1;
+  $count=1;
+
+  while($count<=$n){
+   $fatorial *= $count;
+   $count++;
+  } 
+  echo $fatorial;
+?>
+<?php
+  $n=4;
+  $fatorial=1;
+  $count=1;
+
+  while($count<=$n){
+   $fatorial *= $count;
+   $count++;
+  } 
+  echo $fatorial;
+?>
+
+Ex1.b- Perfeito/Não Perfeito
+<?php
+  $n = 4;
+
+  if($n == soma($n))
+   echo "O número é perfeito";
+  else
+   echo "O número não é perfeito";
+
+  function soma($n){
+   $divisores=0;
+   for($count=1 ; $count<$n ; $count++)
+    if($n % $count==0)
+     $divisores += $count;
+   return $divisores;
+
+  }
+ ?>
+
+Ex1.c
+< php
+for ($n = 2; $n <= 100; $n++) {
+$primo = true;
+for ($x = 2; $x < $n; $x++) {
+if ($n % $x == 0) {
+$primo = false;
+break;
+}
+}
+if ($primo) {
+echo ' ' . $n;
+}
+}
+?>
+
+Ex2.a
+<?php
+  $array = array();
+  $n=4;
+  $fatorial=1;
+  $count=1;
+
+  while($count<=$n){
+   $fatorial *= $count;
+   $count++;
+   $array[] = $fatorial;
+  } 
+   print_r($array);
+?>
+
+Ex2.b
+<?php
+$array = array();
+for ($n = 2; $n <= 100; $n++) {
+$primo = true;
+for ($x = 2; $x < $n; $x++) {
+if ($n % $x == 0) {
+$primo = false;
+break;
+}
+}
+if ($primo) {
+$array[] = $n;
+}
+}
+print_r($array)
+?>
+
+Ex2.c
+<?php
+  $n = 100;
+  $array = array();
+
+  for($x = 1; $x <= $n; $x++)
+  {
+  if($x == soma($x))
+  {
+   $array[] = $x;
+  }
+  }
+   print_r($array);
+
+  function soma($n){
+   $divisores=0;
+   for($count=1 ; $count<$n ; $count++)
+    if($n % $count==0)
+     $divisores += $count;
+   return $divisores;
+  }
+
+ ?>
